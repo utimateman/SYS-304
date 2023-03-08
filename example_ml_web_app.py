@@ -38,7 +38,7 @@ with shoe_size_row:
     st.markdown("  ")
     st.markdown("  ")
     st.markdown("Your shoe size is:")
-    st.markdown("# " + str(predicted_shoe_size[0][0]))
+    st.markdown("# " + str(round(predicted_shoe_size[0][0],2)))
     st.markdown("  ")
     st.markdown("  ")
 
