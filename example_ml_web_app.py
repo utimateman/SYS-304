@@ -1,21 +1,18 @@
 # import pickle
 import streamlit as st
-import joblib
 
 
 
 def predictShoeSize(height):
     predicted_shoe_size = 999
     # Load the ML model
-    filename = 'shoe.size.prediction.model.pkl'
-    model = joblib.load(filename)
-    # with open(filename, 'rb') as file:
-    #     loaded.model = pickle.load(file)
+    filename = 'sys-304/shoe.size.prediction.model.pkl'
+    with open(filename, 'rb') as file:
+        loaded.model = pickle.load(file)
 
     # Use the loaded model to make predictions
     new_X = [[height]]
-    # predicted_shoe_size = loaded.model.predict(new.X)
-    predicted_shoe_size = model.predict(new_X)
+    predicted_shoe_size = loaded.model.predict(new_X)
     print(predicted_shoe_size)
 
     return predicted_shoe_size
