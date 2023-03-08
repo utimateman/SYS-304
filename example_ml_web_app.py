@@ -11,12 +11,12 @@ def predictShoeSize(height):
     # with open(filename, 'rb') as file:
     #     loaded.model = pickle.load(file)
 
-    loaded.model = pickle.load(open('shoe_size_prediction_model.pkl','rb'))
+    loaded_model = pickle.load(open('shoe_size_prediction_model.pkl','rb'))
 
 
     # Use the loaded model to make predictions
     new_X = [[height]]
-    predicted_shoe_size = loaded.model.predict(new_X)
+    predicted_shoe_size = loaded_model.predict(new_X)
     print(predicted_shoe_size)
 
     return predicted_shoe_size
