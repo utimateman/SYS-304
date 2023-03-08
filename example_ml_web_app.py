@@ -5,7 +5,7 @@ import sklearn
 
 
 def predictShoeSize(height):
-    predicted_shoe_size = 999
+    predicted_shoe_size = [[999]]
     # Load the ML model
     # filename = 'sys-304/shoe.size.prediction.model.pkl'
     # with open(filename, 'rb') as file:
@@ -38,7 +38,7 @@ with shoe_size_row:
     st.markdown("  ")
     st.markdown("  ")
     st.markdown("Your shoe size is:")
-    st.markdown("# " + str(predicted_shoe_size))
+    st.markdown("# " + str(predicted_shoe_size[0][0]))
     st.markdown("  ")
     st.markdown("  ")
 
