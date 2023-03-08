@@ -6,7 +6,7 @@ import streamlit as st
 def predictShoeSize(height):
     predicted_shoe_size = 999
     # Load the ML model
-    filename = 'sys-304/shoe.size.prediction.model.pkl'
+    filename = '/sys-304/shoe.size.prediction.model.pkl'
     with open(filename, 'rb') as file:
         loaded.model = pickle.load(file)
 
